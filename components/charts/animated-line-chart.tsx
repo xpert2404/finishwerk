@@ -33,6 +33,7 @@ export function AnimatedLineChart({
   const max = Math.max(...values);
   const min = Math.min(...values);
   const range = max - min || 1;
+  const animate = hydrated && !reduceMotion;
 
   return (
     <div className="space-y-4" aria-hidden="true">
@@ -53,39 +54,49 @@ export function AnimatedLineChart({
           strokeWidth="18"
           strokeLinecap="round"
         />
-        <motion.path
-          d={path}
-          stroke="url(#finishwerk-line)"
-          strokeWidth="4"
-          strokeLinecap="round"
-          {...(hydrated && !reduceMotion
-            ? {
-                initial: { pathLength: 0 },
-                whileInView: { pathLength: 1 },
-                viewport: { once: true, amount: 0.3 },
-                transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] },
-              }
-            : { style: { pathLength: reduceMotion ? 1 : 0 } as React.CSSProperties })}
-        />
+        {animate ? (
+          <motion.path
+            d={path}
+            stroke="url(#finishwerk-line)"
+            strokeWidth="4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            whileInView={{ pathLength: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+          />
+        ) : (
+          <path
+            d={path}
+            stroke="url(#finishwerk-line)"
+            strokeWidth="4"
+            strokeLinecap="round"
+            pathLength={reduceMotion ? 1 : 0}
+          />
+        )}
         {values.map((value, index) => {
           const x = (index / Math.max(values.length - 1, 1)) * 320;
           const y = 140 - ((value - min) / range) * 140;
 
-          return (
+          return animate ? (
             <motion.circle
               key={`${value}-${index}`}
               cx={x}
               cy={y}
               r="5"
               fill="var(--accent)"
-              {...(hydrated && !reduceMotion
-                ? {
-                    initial: { scale: 0 },
-                    whileInView: { scale: 1 },
-                    viewport: { once: true, amount: 0.3 },
-                    transition: { delay: 0.2 + index * 0.08, duration: 0.35 },
-                  }
-                : { style: { transform: reduceMotion ? undefined : "scale(0)" } })}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.2 + index * 0.08, duration: 0.35 }}
+            />
+          ) : (
+            <circle
+              key={`${value}-${index}`}
+              cx={x}
+              cy={y}
+              r={reduceMotion ? 5 : 0}
+              fill="var(--accent)"
             />
           );
         })}

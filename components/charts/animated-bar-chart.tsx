@@ -16,6 +16,7 @@ export function AnimatedBarChart({
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => { setHydrated(true); }, []);
   const max = Math.max(...values);
+  const animate = hydrated && !reduceMotion;
 
   return (
     <div
@@ -30,17 +31,20 @@ export function AnimatedBarChart({
             key={`${value}-${index}`}
             className="flex h-full flex-1 items-end rounded-full bg-white/[0.03] p-1"
           >
-            <motion.div
-              className="w-full rounded-full bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.15))]"
-              {...(hydrated && !reduceMotion
-                ? {
-                    initial: { height: "0%" },
-                    whileInView: { height },
-                    viewport: { once: true, amount: 0.3 },
-                    transition: { delay: index * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] },
-                  }
-                : { style: { height: reduceMotion ? height : "0%" } })}
-            />
+            {animate ? (
+              <motion.div
+                className="w-full rounded-full bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.15))]"
+                initial={{ height: "0%" }}
+                whileInView={{ height }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: index * 0.08, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              />
+            ) : (
+              <div
+                className="w-full rounded-full bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.15))]"
+                style={{ height: reduceMotion ? height : "0%" }}
+              />
+            )}
           </div>
         );
       })}
