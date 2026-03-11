@@ -5,7 +5,8 @@ import { BackgroundScene } from "@/components/layout/background-scene";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
-import { VendorConsentProvider } from "@/components/booking/vendor-consent-store";
+import { ScrollToTop } from "@/components/providers/scroll-to-top";
+import { BookingProvider } from "@/components/booking/booking-provider";
 import { baseMetadata } from "@/lib/metadata";
 import "./globals.css";
 
@@ -33,15 +34,16 @@ export default function RootLayout({
       <body
         className={`${sora.variable} ${manrope.variable} bg-background font-sans text-foreground antialiased`}
       >
-        <VendorConsentProvider>
+        <BookingProvider>
           <SmoothScrollProvider />
+          <ScrollToTop />
           <BackgroundScene />
           <div className="relative min-h-screen">
             <SiteHeader />
             <main>{children}</main>
             <SiteFooter />
           </div>
-        </VendorConsentProvider>
+        </BookingProvider>
       </body>
     </html>
   );

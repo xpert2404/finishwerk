@@ -16,7 +16,7 @@ export const siteConfig = {
   ],
   contact: {
     email: "kontakt@finishwerk.de",
-    phone: "",
+    phone: "+49 172 8710 565",
     region: "Deutschland",
   },
   legal: {
@@ -24,7 +24,7 @@ export const siteConfig = {
     imprintHref: "/impressum",
   },
   booking: {
-    calUrl: "https://cal.com/finishwerk/erstgespraech",
+    calUrl: "https://cal.eu/finishwerk/erstgespraech",
     consentTitle: "Externe Terminbuchung laden",
     consentText:
       "Für die Terminbuchung wird Cal.com als externer Dienst geladen. Dabei können personenbezogene Daten an den Anbieter übertragen werden. FinishWerk lädt den Buchungsdienst erst nach Ihrer ausdrücklichen Einwilligung.",

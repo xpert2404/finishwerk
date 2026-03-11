@@ -1,5 +1,5 @@
 import { ArrowRight, Mail } from "lucide-react";
-import { BookingCta } from "@/components/booking/booking-cta";
+import { BookingButton } from "@/components/booking/booking-button";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionShell } from "@/components/layout/section-shell";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,7 @@ export function CtaSection({ content }: { content: CtaContent }) {
                 {content.body}
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <BookingCta
+                <BookingButton
                   label={content.primaryCta}
                   variant="primary"
                   className="sm:min-w-[15rem]"

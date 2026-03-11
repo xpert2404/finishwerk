@@ -28,7 +28,25 @@ export function ComparisonChart({
       ].map((item, index) => (
         <div key={item.label} className="space-y-3">
           <div className="flex h-40 items-end rounded-[1.4rem] bg-white/[0.03] p-3">
-            {hydrated && !reduceMotion ? (
+            {!hydrated ? (
+              <div
+                className={`w-full rounded-[1rem] ${
+                  item.muted
+                    ? "bg-white/10"
+                    : "bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.12))]"
+                }`}
+                style={{ height: "0%" }}
+              />
+            ) : reduceMotion ? (
+              <div
+                className={`w-full rounded-[1rem] ${
+                  item.muted
+                    ? "bg-white/10"
+                    : "bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.12))]"
+                }`}
+                style={{ height: `${item.value}%` }}
+              />
+            ) : (
               <motion.div
                 className={`w-full rounded-[1rem] ${
                   item.muted
@@ -39,15 +57,6 @@ export function ComparisonChart({
                 whileInView={{ height: `${item.value}%` }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.14, duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-              />
-            ) : (
-              <div
-                className={`w-full rounded-[1rem] ${
-                  item.muted
-                    ? "bg-white/10"
-                    : "bg-[linear-gradient(180deg,var(--accent),rgba(255,255,255,0.12))]"
-                }`}
-                style={{ height: reduceMotion ? `${item.value}%` : "0%" }}
               />
             )}
           </div>

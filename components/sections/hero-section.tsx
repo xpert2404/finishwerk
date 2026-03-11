@@ -3,7 +3,7 @@
 import { type ReactNode, useEffect, useState } from "react";
 import { ArrowRight, ChartNoAxesCombined, ShieldCheck, Workflow } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { BookingCta } from "@/components/booking/booking-cta";
+import { BookingButton } from "@/components/booking/booking-button";
 import { AnimatedLineChart } from "@/components/charts/animated-line-chart";
 import { ComparisonChart } from "@/components/charts/comparison-chart";
 import { SectionShell } from "@/components/layout/section-shell";
@@ -178,7 +178,7 @@ export function HeroSection({ content }: { content: HeroContent }) {
           {/* ── CTAs ── */}
           <Anim delay={0.3} y={16}>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <BookingCta
+              <BookingButton
                 label={content.primaryCta}
                 variant="primary"
                 className="sm:min-w-[15rem]"

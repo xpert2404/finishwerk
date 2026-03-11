@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
-import { BookingCta } from "@/components/booking/booking-cta";
+import { BookingButton } from "@/components/booking/booking-button";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
@@ -81,7 +81,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <BookingCta
+            <BookingButton
               label={siteConfig.ctaLabel}
               variant="primary"
               className="min-w-[13rem]"
@@ -102,7 +102,7 @@ export function SiteHeader() {
       </header>
 
       <MobileNav open={open} onClose={() => setOpen(false)} items={siteConfig.navItems}>
-        <BookingCta
+        <BookingButton
           label={siteConfig.ctaLabel}
           variant="primary"
           className="w-full"

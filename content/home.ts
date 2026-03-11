@@ -5,29 +5,29 @@ export const homeContent = {
     eyebrow: "Digitale Systeme statt Einzelleistungen",
     title: "Mehr Umsatz. Mehr Sichtbarkeit. Mehr Kontrolle.",
     subtitle:
-      "FinishWerk entwickelt Websites, Shops, SEO-, Social- und Prozesssysteme, die Geschäftswachstum messbar unterstützen statt nur gut auszusehen.",
+      "Wenn jemand \u201eD\u00f6ner bestellen\u201c oder \u201eHandwerker in der N\u00e4he\u201c googelt, tauchen Sie aktuell nicht auf \u2014 Ihre Konkurrenz schon. FinishWerk baut das System, das Sie sichtbar macht, Anfragen bringt und Plattformgeb\u00fchren spart.",
     primaryCta: "Kostenloses Erstgespräch",
     secondaryCta: "Ergebnisse ansehen",
     trustChips: [
       "8+ Jahre Expertise",
       "100+ betreute Projekte",
-      "Seit 2022 als FinishWerk",
+      "Top-3 bei lokaler Google-Suche",
     ],
     visualCards: [
       {
         label: "Direktumsatz",
         value: "+24 %",
-        detail: "Kundenbeispiel aus einer Direct-Order-Optimierung",
+        detail: "Kundenbeispiel: Eigene Bestellseite statt Lieferando-Provision",
       },
       {
-        label: "Kontrolle über Marge",
+        label: "Marge zurückgeholt",
         value: "+44 %",
-        detail: "Mehr vom Umsatz behalten statt Plattformgebühren abgeben",
+        detail: "Weniger Plattformgebühren, mehr vom eigenen Umsatz behalten",
       },
       {
-        label: "Digitale Sichtbarkeit",
-        value: "7/7",
-        detail: "Präsenz auf Website, Suche, Content und Anfragepfaden",
+        label: "Google-Sichtbarkeit",
+        value: "Seite 1",
+        detail: "Von unsichtbar auf Seite 1 bei relevanten lokalen Suchbegriffen",
       },
     ],
   },
@@ -62,24 +62,24 @@ export const homeContent = {
   ],
   problems: [
     {
-      title: "Plattformgebühren fressen Marge",
+      title: "Plattformen fressen Ihre Marge",
       body:
-        "Wenn Direktkundengeschäft über Plattformen läuft, wächst der Umsatz nicht automatisch gesund. Die Marge bleibt fremdbestimmt.",
+        "Lieferando nimmt bis zu 30 % Provision, Check24 und Booking.com ähnlich. Jede Bestellung über eine Plattform schmälert den Gewinn — und macht Sie abhängig von deren Regeln.",
     },
     {
-      title: "Sichtbarkeit ist inkonsistent",
+      title: "Kunden finden Sie nicht bei Google",
       body:
-        "Ohne saubere Website, Suchsichtbarkeit und Content-System entsteht Nachfrage zufällig statt planbar.",
+        "Wenn jemand \u201eDöner bestellen [Stadt]\u201c oder \u201eElektriker in der Nähe\u201c sucht, erscheint Ihre Konkurrenz — nicht Sie. Ohne SEO-System bleibt Sichtbarkeit Zufall.",
     },
     {
-      title: "Webseiten verkaufen nicht",
+      title: "Ihre Website bringt keine Anfragen",
       body:
-        "Viele Seiten informieren, aber führen nicht. Fehlende Struktur, keine klare CTA-Logik und schwache Funnels kosten Anfragen und Bestellungen.",
+        "Die Seite sieht vielleicht gut aus, aber es fehlt die Struktur: kein klarer Handlungsaufruf, kein Funnel, keine Führung. Besucher kommen — und gehen wieder.",
     },
     {
-      title: "Digitale Prozesse brechen an Übergängen",
+      title: "Digitale Insellösungen statt System",
       body:
-        "Anfragen, Bestellungen, Inhalte und interne Abläufe laufen nebeneinander statt in einem kontrollierten System.",
+        "Website hier, Social Media dort, Bestellungen per Telefon. Ohne ein verbundenes System gehen Anfragen verloren und Prozesse kosten unnötig Zeit.",
     },
   ],
   solutionClusters: [
@@ -175,22 +175,22 @@ export const homeContent = {
     {
       title: "Restaurants & Lieferdienste",
       body:
-        "Direktbestellung, bessere Marge, klarere Angebotslogik und weniger Abhängigkeit von Plattformen.",
+        "Statt 30 % an Lieferando abgeben: eigene Bestellseite, Google Maps Platz 1, QR-Code auf jedem Flyer. Kunden bestellen direkt bei Ihnen — mehr Marge, volle Kontrolle.",
+    },
+    {
+      title: "Handwerker & Dienstleister",
+      body:
+        "Wenn jemand \u201eElektriker in der Nähe\u201c oder \u201eMaler [Stadt]\u201c googelt, finden sie SIE — nicht den Kollegen ohne Website. Strukturierte Anfragepfade statt verlorener Anrufe.",
     },
     {
       title: "Lokale Unternehmen",
       body:
-        "Stärkere Sichtbarkeit, professioneller digitaler Auftritt und bessere Anfragen aus dem direkten Umfeld.",
+        "Google-Maps-Profil, Bewertungen, lokale Suchbegriffe — alles in einem System. Ihr Geschäft wird dort sichtbar, wo Kunden in Ihrer Nähe aktiv suchen.",
     },
     {
-      title: "E-Commerce",
+      title: "E-Commerce & Shops",
       body:
-        "Conversion-orientierte Shops, klare Produktwege und ein System, das Marketing und Verkauf besser verzahnt.",
-    },
-    {
-      title: "Dienstleister",
-      body:
-        "Strukturierte Lead-Pfade, bessere Vertrauenskommunikation und weniger Reibung vom Erstkontakt bis zur Anfrage.",
+        "Conversion-orientierte Shops mit klarer Produktführung. SEO bringt Besucher, das System macht sie zu Käufern — weniger Werbekosten, mehr organischer Umsatz.",
     },
   ],
   caseStudy: {
@@ -223,21 +223,21 @@ export const homeContent = {
     ],
   },
   visibility: {
-    heading: "Sichtbarkeit ist kein Zusatz. Sie ist Nachfrage-Infrastruktur.",
+    heading: "SEO bedeutet: Kunden finden SIE, nicht Ihre Konkurrenz.",
     body:
-      "FinishWerk baut nicht nur Seiten. Sichtbarkeit wird als System gedacht: organischer Content, lokale Relevanz, SEO-Fundament, wiedererkennbare Marke und sauber geführte digitale Einstiegspunkte.",
+      "Was ist SEO? Ganz einfach: Wenn jemand \u201ebester Döner [Stadt]\u201c oder \u201eHandwerker in der Nähe\u201c bei Google eingibt, zeigt Google IHRE Seite auf Platz 1 — nicht die Ihrer Konkurrenz. FinishWerk baut dieses System: technisches SEO-Fundament, lokale Sichtbarkeit, starkes Google-Maps-Profil und Content, der Nachfrage auffängt.",
     modules: [
       {
         title: "SEO-Fundament",
-        body: "Technische Struktur, lokale Suchrelevanz und Seiten, die nicht nur existieren, sondern gefunden werden.",
+        body: "Technische Struktur, lokale Suchbegriffe und Seiten, die Google versteht und auf Seite 1 rankt. Aus \u201eunsichtbar\u201c wird \u201egefunden\u201c.",
       },
       {
-        title: "Social Presence",
-        body: "Content, der Präsenz erzeugt und die Marke dort ernsthaft sichtbar macht, wo Zielgruppen Aufmerksamkeit haben.",
+        title: "Lokale Präsenz",
+        body: "Google Maps, Bewertungen, Brancheneinträge — wenn Kunden in Ihrer Stadt suchen, erscheinen Sie als erste Anlaufstelle.",
       },
       {
-        title: "Demand Capture",
-        body: "Vom Interesse zur konkreten Handlung: Suchanfrage, Profilaufruf, Klick, Anfrage oder Direktbestellung.",
+        title: "Nachfrage auffangen",
+        body: "Vom Google-Ergebnis zur Anfrage: Besucher landen auf Ihrer Seite und werden durch klare Handlungsaufforderungen zu Kunden.",
       },
     ],
     reachValues: [14, 19, 23, 34, 41, 56, 73],
@@ -269,9 +269,9 @@ export const homeContent = {
   },
   faqItems,
   cta: {
-    title: "Lassen Sie uns den Umsatzhebel finden, der wirklich zählt.",
+    title: "Finden Sie heraus, was passiert, wenn Kunden Sie bei Google finden.",
     body:
-      "Im Erstgespräch geht es nicht um leere Agentur-Pitches, sondern um Marge, Sichtbarkeit, Conversion und Prozesslogik. Erst wenn der Hebel klar ist, wird über Umsetzung gesprochen.",
+      "Im kostenlosen Erstgespräch analysieren wir gemeinsam: Wo stehen Sie bei Google? Wie viel Marge geht an Plattformen? Und welcher digitale Hebel bringt Ihnen am schnellsten mehr Umsatz.",
     primaryCta: "Erstgespräch buchen",
     secondaryCta: "Per E-Mail anfragen",
   },

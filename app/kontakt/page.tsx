@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowRight, Mail } from "lucide-react";
-import { BookingCta } from "@/components/booking/booking-cta";
+import { BookingButton } from "@/components/booking/booking-button";
 import { Reveal } from "@/components/motion/reveal";
 import { FaqSection } from "@/components/sections/faq-section";
 import { PageHero } from "@/components/sections/page-hero";
@@ -41,7 +41,7 @@ export default function KontaktPage() {
                 gesprochen. Kein Agentur-Pitch, keine vorgefertigte Lösung.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <BookingCta
+                <BookingButton
                   label="Erstgespräch buchen"
                   variant="primary"
                   className="sm:min-w-[15rem]"
