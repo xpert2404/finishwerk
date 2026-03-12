@@ -1,0 +1,21 @@
+{
+    "name": "FinishWerk",
+    "short_name": "FinishWerk",
+    "description": "Digitale Systeme für mehr Umsatz, Sichtbarkeit und Kontrolle.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#3b82f6",
+    "icons": [
+        {
+            "src": "/brand/finishwerk-icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/brand/finishwerk-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -35,10 +35,14 @@ export const baseMetadata: Metadata = {
     images: ["/brand/finishwerk-wordmark.png"],
   },
   icons: {
-    icon: "/brand/finishwerk-icon.png",
+    icon: [
+      { url: "/brand/finishwerk-icon.png", sizes: "any" },
+      { url: "/brand/finishwerk-icon.png", type: "image/png", sizes: "192x192" },
+    ],
     shortcut: "/brand/finishwerk-icon.png",
-    apple: "/brand/finishwerk-icon.png",
+    apple: { url: "/brand/finishwerk-icon.png", sizes: "180x180" },
   },
+  manifest: "/manifest.json",
 };
 
 export function buildOrganizationJsonLd() {

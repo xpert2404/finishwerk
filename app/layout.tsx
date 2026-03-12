@@ -31,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" suppressHydrationWarning>
+      <head>
+        <meta name="theme-color" content="#0a0a0a" />
+      </head>
       <body
         className={`${sora.variable} ${manrope.variable} bg-background font-sans text-foreground antialiased`}
       >

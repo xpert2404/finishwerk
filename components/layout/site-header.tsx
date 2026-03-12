@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { BookingButton } from "@/components/booking/booking-button";
 import { MobileNav } from "@/components/layout/mobile-nav";
@@ -33,54 +33,67 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
+      <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
         <div
           className={cn(
-            "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-3 transition-all duration-300 sm:px-5",
+            "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-500 sm:px-6",
             scrolled
-              ? "surface-panel border-white/10"
+              ? "header-glass border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
               : "border-transparent bg-transparent",
           )}
         >
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/10 bg-black/30">
+          {/* ── Logo ── */}
+          <Link href="/" className="group flex items-center gap-3">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 bg-black/40 ring-1 ring-white/5 transition-all duration-300 group-hover:ring-[var(--accent)]/30">
               <Image
                 src="/brand/finishwerk-icon.png"
                 alt="FinishWerk Icon"
                 fill
                 className="object-cover"
-                sizes="44px"
+                sizes="40px"
                 priority
               />
             </div>
             <div className="hidden sm:block">
-              <p className="font-display text-lg font-semibold tracking-tight text-white">
+              <p className="font-display text-base font-semibold tracking-tight text-white transition-colors group-hover:text-[var(--accent-strong)]">
                 FinishWerk
               </p>
-              <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
                 Digitale Systeme
               </p>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-6 lg:flex">
+          {/* ── Desktop Nav ── */}
+          <nav className="hidden items-center gap-1 lg:flex">
             {siteConfig.navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium hover:text-white",
+                  "relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
                   pathname === item.href
                     ? "text-white"
-                    : "text-[var(--muted-strong)]",
+                    : "text-[var(--muted-strong)] hover:bg-white/[0.04] hover:text-white",
                 )}
               >
                 {item.label}
+                {pathname === item.href && (
+                  <span className="absolute bottom-0.5 left-1/2 h-[2px] w-5 -translate-x-1/2 rounded-full bg-[var(--accent)]" />
+                )}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          {/* ── Desktop Actions ── */}
+          <div className="hidden items-center gap-2 lg:flex">
+            <a
+              href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.06] text-[var(--muted-strong)] transition-all duration-200 hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+              aria-label="Anrufen"
+            >
+              <Phone className="h-4 w-4" />
+            </a>
             <BookingButton
               label={siteConfig.ctaLabel}
               variant="primary"
@@ -88,7 +101,15 @@ export function SiteHeader() {
             />
           </div>
 
-          <div className="lg:hidden">
+          {/* ── Mobile Menu Button ── */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.06] text-[var(--muted-strong)] transition-all hover:text-white"
+              aria-label="Anrufen"
+            >
+              <Phone className="h-4 w-4" />
+            </a>
             <Button
               variant="ghost"
               size="icon"
@@ -101,7 +122,11 @@ export function SiteHeader() {
         </div>
       </header>
 
-      <MobileNav open={open} onClose={() => setOpen(false)} items={siteConfig.navItems}>
+      <MobileNav
+        open={open}
+        onClose={() => setOpen(false)}
+        items={siteConfig.navItems}
+      >
         <BookingButton
           label={siteConfig.ctaLabel}
           variant="primary"
