@@ -14,12 +14,19 @@ export function AboutSection({ content }: { content: AboutContent }) {
   return (
     <SectionShell id="ueber-uns">
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-        <SectionIntro eyebrow="Über uns" title={content.title} body={content.body} />
+        <SectionIntro
+          eyebrow="Über uns"
+          title={content.title}
+          body={content.body}
+        />
         <Reveal>
           <GlowPanel className="h-full">
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               {content.stats.map((stat) => (
-                <div key={stat.label} className="surface-panel-soft rounded-[1.5rem] p-5">
+                <div
+                  key={stat.label}
+                  className="surface-panel-soft rounded-[1.5rem] p-5"
+                >
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                     {stat.label}
                   </p>
@@ -35,7 +42,7 @@ export function AboutSection({ content }: { content: AboutContent }) {
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {content.principles.map((principle, index) => (
-          <Reveal key={principle} delay={index * 0.08}>
+          <Reveal key={principle} delay={index * 0.08} preset="soft-parallax">
             <GlowPanel soft className="h-full">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 Prinzip {index + 1}

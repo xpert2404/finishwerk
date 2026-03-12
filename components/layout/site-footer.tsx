@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
 const CURRENT_YEAR = 2026;
@@ -9,7 +10,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-white/[0.06]">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         {/* ── Main Grid ── */}
-        <div className="grid gap-10 py-12 lg:grid-cols-[1.3fr_0.85fr_0.85fr]">
+        <div className="grid gap-10 py-14 lg:grid-cols-[1.3fr_0.85fr_0.85fr]">
           {/* Brand Column */}
           <div className="space-y-5">
             <div className="relative h-14 w-40">
@@ -24,12 +25,24 @@ export function SiteFooter() {
             <p className="max-w-md text-sm leading-7 text-[var(--muted-strong)]">
               {siteConfig.tagline}
             </p>
-            <a
-              href={`mailto:${siteConfig.contact.email}`}
-              className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[var(--accent)]"
-            >
-              {siteConfig.contact.email}
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[var(--accent)]"
+              >
+                <Mail className="h-3.5 w-3.5 text-[var(--accent)]" />
+                {siteConfig.contact.email}
+              </a>
+              {siteConfig.contact.phone && (
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[var(--accent)]"
+                >
+                  <Phone className="h-3.5 w-3.5 text-[var(--accent)]" />
+                  {siteConfig.contact.phone}
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Navigation Column */}

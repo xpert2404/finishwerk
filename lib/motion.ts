@@ -3,7 +3,7 @@
    All motion components reference these values for consistency.
    ────────────────────────────────────────────────────────── */
 
-export type MotionPreset = "fade-up" | "scale-in" | "soft-parallax";
+export type MotionPreset = "fade-up" | "scale-in" | "soft-parallax" | "fade-left";
 
 /* ── Timing (seconds) ──────────────────────── */
 
@@ -59,6 +59,13 @@ export function softParallax(distance = 14) {
     };
 }
 
+export function fadeLeft(distance = 24) {
+    return {
+        hidden: { opacity: 0, x: distance },
+        visible: { opacity: 1, x: 0 },
+    };
+}
+
 export function hoverLift(y = -6, scale = 1.01) {
     return {
         rest: { y: 0, scale: 1 },
@@ -74,6 +81,8 @@ export function getPresetVariants(preset: MotionPreset, distance: number) {
             return scaleIn();
         case "soft-parallax":
             return softParallax(Math.max(10, distance));
+        case "fade-left":
+            return fadeLeft(distance);
         default:
             return fadeUp(distance);
     }

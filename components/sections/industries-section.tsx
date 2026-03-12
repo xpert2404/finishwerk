@@ -29,7 +29,11 @@ export function IndustriesSection({
           const Icon = icons[index] ?? Building2;
 
           return (
-            <Reveal key={item.title} delay={index * 0.08}>
+            <Reveal
+              key={item.title}
+              delay={index * 0.08}
+              preset={index % 2 === 0 ? "fade-up" : "fade-left"}
+            >
               <GlowPanel className="group h-full">
                 <div className="inline-flex rounded-2xl border border-white/10 bg-white/[0.03] p-3 transition-colors group-hover:border-[var(--accent-border)] group-hover:bg-[var(--accent-bg)]">
                   <Icon className="h-6 w-6 text-[var(--accent)]" />

@@ -7,12 +7,16 @@ type GlowPanelProps = {
   soft?: boolean;
 };
 
-export function GlowPanel({ children, className, soft = false }: GlowPanelProps) {
+export function GlowPanel({
+  children,
+  className,
+  soft = false,
+}: GlowPanelProps) {
   return (
     <div
       className={cn(
         soft ? "surface-panel-soft" : "surface-panel",
-        "rounded-[1.75rem] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-hover)]",
+        "rounded-[1.75rem] p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--border-hover)] hover:shadow-[0_0_40px_rgba(59,130,246,0.06)]",
         className,
       )}
     >

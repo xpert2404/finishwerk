@@ -16,7 +16,7 @@ export function CapabilitiesSection({
         body="FinishWerk liefert Websites, Shops, SEO, Bestellsysteme, Social und Infrastruktur nicht als lose Services, sondern als präzise zusammengesetztes System."
       />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
         {content.map((item, index) => (
           <Reveal key={item} delay={index * 0.05}>
             <GlowPanel soft className="h-full">

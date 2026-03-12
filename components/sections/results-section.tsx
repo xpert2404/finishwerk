@@ -50,14 +50,14 @@ export function ResultsSection({
         body="KPI-Elemente und Diagramme zeigen die Logik hinter dem Ergebnis: bessere Marge, stärkere Sichtbarkeit, geführte Conversion und mehr Kontrolle über den Direktkanal."
       />
 
-      <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
         {metrics.map((metric, index) => (
           <Reveal key={metric.label} delay={index * 0.07}>
             <GlowPanel className="h-full">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 {metric.label}
               </p>
-              <p className="mt-4 font-display text-4xl font-semibold text-white sm:text-5xl">
+              <p className="mt-4 font-display text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
                 <CounterMetric value={metric.value} suffix={metric.suffix} />
               </p>
               <p className="mt-4 text-sm leading-7 text-[var(--muted-strong)]">
@@ -71,7 +71,7 @@ export function ResultsSection({
         ))}
       </div>
 
-      <div className="mt-12 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-[1.08fr_0.92fr]">
         <Reveal>
           <GlowPanel className="h-full">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">

@@ -25,14 +25,18 @@ export function SolutionSystemSection({
         body="Jede Säule erfüllt einen Zweck. Zusammen erzeugen sie Sichtbarkeit, bessere Conversion, stärkere Kontrolle über den Direktkanal und weniger digitale Reibung."
       />
 
-      <div className="relative mt-12">
+      <div className="relative mt-10 sm:mt-12">
         <div className="accent-line absolute left-1/2 top-10 hidden h-px w-[78%] -translate-x-1/2 lg:block" />
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
           {content.map((cluster, index) => {
             const Icon = icons[index] ?? Boxes;
 
             return (
-              <Reveal key={cluster.title} delay={index * 0.08}>
+              <Reveal
+                key={cluster.title}
+                delay={index * 0.08}
+                preset={index % 2 === 0 ? "fade-up" : "scale-in"}
+              >
                 <GlowPanel className="relative h-full">
                   <div className="mb-6 inline-flex rounded-2xl border border-[var(--accent-border)] bg-[var(--accent-bg)] p-3">
                     <Icon className="h-6 w-6 text-[var(--accent)]" />

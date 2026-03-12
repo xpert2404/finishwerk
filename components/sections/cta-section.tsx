@@ -19,11 +19,11 @@ export function CtaSection({ content }: { content: CtaContent }) {
       <Reveal preset="scale-in">
         <GlowPanel className="overflow-hidden rounded-[2.25rem] p-0">
           <div className="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="space-y-6 p-7 sm:p-10 lg:p-12">
+            <div className="space-y-6 p-6 sm:p-10 lg:p-12">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
                 Kontakt / Erstgespräch
               </p>
-              <h2 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 {content.title}
               </h2>
               <p className="max-w-2xl text-lg leading-8 text-[var(--muted-strong)]">
@@ -46,7 +46,7 @@ export function CtaSection({ content }: { content: CtaContent }) {
               </div>
             </div>
 
-            <div className="border-t border-white/10 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <div className="border-t border-white/10 p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
               <div className="space-y-5">
                 <div className="surface-panel-soft rounded-[1.6rem] p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
@@ -54,8 +54,8 @@ export function CtaSection({ content }: { content: CtaContent }) {
                   </p>
                   <p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">
                     Die Terminbuchung wird nicht automatisch geladen. Erst nach
-                    Ihrer ausdrücklichen Zustimmung wird der externe Buchungsdienst
-                    eingebunden.
+                    Ihrer ausdrücklichen Zustimmung wird der externe
+                    Buchungsdienst eingebunden.
                   </p>
                 </div>
                 <div className="surface-panel-soft rounded-[1.6rem] p-5">
@@ -71,10 +71,16 @@ export function CtaSection({ content }: { content: CtaContent }) {
                   </a>
                 </div>
                 <div className="flex flex-wrap gap-4 text-sm text-[var(--muted-strong)]">
-                  <a href={siteConfig.legal.privacyHref} className="hover:text-white">
+                  <a
+                    href={siteConfig.legal.privacyHref}
+                    className="hover:text-white"
+                  >
                     Datenschutz
                   </a>
-                  <a href={siteConfig.legal.imprintHref} className="hover:text-white">
+                  <a
+                    href={siteConfig.legal.imprintHref}
+                    className="hover:text-white"
+                  >
                     Impressum
                   </a>
                 </div>

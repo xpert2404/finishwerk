@@ -11,8 +11,15 @@ export function TrustCountersSection() {
       <Reveal preset="fade-up">
         <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4 lg:gap-12">
           {siteConfig.trustNumbers.map((item, index) => (
-            <div key={item.label} className="text-center">
-              <p className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <div
+              key={item.label}
+              className={`text-center ${
+                index < siteConfig.trustNumbers.length - 1
+                  ? "lg:border-r lg:border-white/[0.06]"
+                  : ""
+              }`}
+            >
+              <p className="font-display text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                 <CounterMetric
                   value={item.value}
                   suffix={item.suffix}
