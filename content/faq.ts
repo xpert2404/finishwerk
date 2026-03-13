@@ -1,32 +1,32 @@
 export const faqItems = [
   {
-    question: "Ist FinishWerk nur auf Restaurants ausgerichtet?",
+    question: "Brauche ich wirklich eine eigene Website, wenn ich schon bei Lieferando bin?",
     answer:
-      "Nein. Restaurants sind ein starker Proof-Case, weil die Hebel bei Direktbestellung, Sichtbarkeit und Marge besonders klar sind. Die Systeme sind jedoch bewusst auch auf lokale Unternehmen, E-Commerce und Dienstleister übertragbar.",
+      "Ja — gerade dann. Lieferando nimmt bis zu 30 % Provision pro Bestellung. Mit einer eigenen Bestellseite behalten Sie mehr von jedem Euro. Und Sie bauen echte Stammkunden auf, die direkt bei Ihnen bestellen.",
   },
   {
-    question: "Verkauft ihr einzelne Services oder komplette Systeme?",
+    question: "Ist FinishWerk nur für Restaurants?",
     answer:
-      "Die Leistungen sind Bausteine. Verkauft wird die Lösung für ein Geschäftsproblem: mehr Direktumsatz, mehr Kontrolle über Anfragen und Bestellungen, bessere Sichtbarkeit und sauberere digitale Prozesse.",
+      "Nein. Restaurants sind unser stärkster Case, weil die Hebel dort besonders klar sind. Aber unser System funktioniert genauso für Handwerker, lokale Geschäfte, Praxen und Online-Shops — überall, wo Kunden über Google suchen.",
   },
   {
-    question: "Wie läuft ein Projekt typischerweise ab?",
+    question: "Wie schnell sehe ich erste Ergebnisse?",
     answer:
-      "Zuerst wird die geschäftliche Reibung identifiziert: Sichtbarkeit, Conversion, Plattformkosten, Prozessbrüche oder fehlende digitale Hoheit. Danach wird ein passendes System aus Website, Shop, SEO, CMS, Automationen und Reichweitenmaßnahmen aufgebaut.",
+      "Die eigene Website und Bestellseite stehen in wenigen Wochen. Google-Sichtbarkeit baut sich über 2–4 Monate auf. Unsere Erfahrung: Die meisten Kunden sehen die ersten Direktbestellungen und Anfragen bereits im ersten Monat nach Launch.",
   },
   {
-    question: "Wie schnell sind erste Ergebnisse sichtbar?",
+    question: "Wie läuft ein Projekt ab?",
     answer:
-      "Das hängt vom Ausgangszustand ab. Conversion- und Prozessverbesserungen wirken oft schneller, während SEO- und organische Sichtbarkeit über mehrere Wochen und Monate anziehen. FinishWerk priorisiert zuerst die Hebel mit direktem Geschäftseffekt.",
+      "Erstgespräch (15 Min, kostenlos) → wir schauen uns an, wo Sie Geld verlieren. Dann bauen wir Ihr System in 3 Phasen auf: Laden füllen, Planbarkeit schaffen, Gewinn optimieren. Sie sind in jedem Schritt eingebunden.",
+  },
+  {
+    question: "Was kostet das?",
+    answer:
+      "Das hängt vom Umfang ab. Im Erstgespräch klären wir, welche Bausteine für Sie Sinn machen, und Sie bekommen ein konkretes Angebot — keine versteckten Kosten, keine laufenden Gebühren, die Sie nicht kennen.",
   },
   {
     question: "Können bestehende Systeme weitergenutzt werden?",
     answer:
-      "Ja. Wenn vorhandene Tools oder Prozesse funktionieren, werden sie eingebunden statt blind ersetzt. Ziel ist eine bessere Systemlogik, nicht unnötige Komplexität.",
-  },
-  {
-    question: "Wie ist die Terminbuchung datenschutzseitig gelöst?",
-    answer:
-      "Die externe Buchung wird nicht automatisch geladen. Erst nach klarer Einwilligung wird Cal.com als Drittanbieter eingebunden. Vorher gibt es keine Script-, Iframe- oder Preconnect-Anfragen zu externen Diensten.",
+      "Ja. Wenn Ihre Website oder bestehende Tools funktionieren, bauen wir darauf auf. Wir ersetzen nur, was nicht funktioniert. Das spart Zeit und Geld.",
   },
 ] as const;

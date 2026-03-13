@@ -9,7 +9,7 @@ type IndustryItem = {
   body: string;
 };
 
-const icons = [UtensilsCrossed, Store, ShoppingBag, Building2];
+const icons = [UtensilsCrossed, Store, Building2, ShoppingBag];
 
 export function IndustriesSection({
   content,
@@ -19,9 +19,9 @@ export function IndustriesSection({
   return (
     <SectionShell id="branchen">
       <SectionIntro
-        eyebrow="Branchen"
-        title="Breit genug für mehrere Geschäftsmodelle. Klar genug, um konkrete Probleme zu lösen."
-        body="Restaurants sind ein starker Einstieg. Die übergeordnete Positionierung bleibt bewusst breiter: lokale Unternehmen, E-Commerce und Dienstleister profitieren von denselben Systemhebeln."
+        eyebrow="Für wen ist das?"
+        title="Ob Restaurant, Handwerker oder Online-Shop — das System funktioniert, wenn Kunden Sie über Google suchen."
+        body="Unsere stärksten Cases kommen aus der Gastro. Aber die Hebel sind überall dieselben: Sichtbarkeit, Direktkontakt und ein System das zusammenarbeitet."
       />
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">

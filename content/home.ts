@@ -2,10 +2,10 @@ import { faqItems } from "@/content/faq";
 
 export const homeContent = {
   hero: {
-    eyebrow: "Digitale Systeme statt Einzelleistungen",
-    title: "Mehr Umsatz. Mehr Sichtbarkeit. Mehr Kontrolle.",
+    eyebrow: "Für Restaurants, Handwerker & lokale Unternehmen",
+    title: "Ihre Konkurrenz ist bei Google sichtbar. Sie nicht.",
     subtitle:
-      "Wenn jemand \u201eD\u00f6ner bestellen\u201c oder \u201eHandwerker in der N\u00e4he\u201c googelt, tauchen Sie aktuell nicht auf \u2014 Ihre Konkurrenz schon. FinishWerk baut das System, das Sie sichtbar macht, Anfragen bringt und Plattformgeb\u00fchren spart.",
+      "30 % Ihres Umsatzes gehen an Lieferando. Ihre Website bringt keine einzige Anfrage. Und wenn jemand Ihren Service googelt, finden sie jemand anderen. FinishWerk ändert das — mit einem System, das Kunden direkt zu Ihnen bringt.",
     primaryCta: "Kostenloses Erstgespräch",
     secondaryCta: "Ergebnisse ansehen",
     trustChips: [
@@ -15,19 +15,19 @@ export const homeContent = {
     ],
     visualCards: [
       {
-        label: "Direktumsatz",
+        label: "Direktbestellungen",
         value: "+24 %",
-        detail: "Kundenbeispiel: Eigene Bestellseite statt Lieferando-Provision",
+        detail: "Mehr Bestellungen über die eigene Website statt über Lieferando & Co.",
       },
       {
-        label: "Marge zurückgeholt",
-        value: "+44 %",
-        detail: "Weniger Plattformgebühren, mehr vom eigenen Umsatz behalten",
+        label: "Plattformkosten gespart",
+        value: "–44 %",
+        detail: "Weniger Provisionen an Drittplattformen — mehr bleibt bei Ihnen",
       },
       {
-        label: "Google-Sichtbarkeit",
+        label: "Google-Ranking",
         value: "Seite 1",
-        detail: "Von unsichtbar auf Seite 1 bei relevanten lokalen Suchbegriffen",
+        detail: "Ihr Geschäft auf Seite 1 bei lokalen Suchanfragen wie \u201ePizza bestellen [Stadt]\u201c",
       },
     ],
   },
@@ -62,56 +62,41 @@ export const homeContent = {
   ],
   problems: [
     {
-      title: "Plattformen fressen Ihre Marge",
+      title: "Sie zahlen Tausende an Lieferando — und haben trotzdem keine Stammkunden",
       body:
-        "Lieferando nimmt bis zu 30 % Provision, Check24 und Booking.com ähnlich. Jede Bestellung über eine Plattform schmälert den Gewinn — und macht Sie abhängig von deren Regeln.",
+        "Jeden Monat gehen 20–30 % Ihres Umsatzes an Plattformen wie Lieferando, Wolt oder Uber Eats. Die Kunden gehören nicht Ihnen — sie gehören der Plattform. Und wenn die Gebühren steigen, können Sie nichts tun.",
     },
     {
-      title: "Kunden finden Sie nicht bei Google",
+      title: "Wenn jemand Ihren Service googelt, findet er jemand anderen",
       body:
-        "Wenn jemand \u201eDöner bestellen [Stadt]\u201c oder \u201eElektriker in der Nähe\u201c sucht, erscheint Ihre Konkurrenz — nicht Sie. Ohne SEO-System bleibt Sichtbarkeit Zufall.",
+        "Ein Kunde sucht \u201ePizza bestellen\u201c oder \u201eElektriker in der Nähe\u201c — und findet Ihre Konkurrenz. Sie tauchen nicht auf, obwohl Sie besser sind. Ohne System ist Sichtbarkeit reiner Zufall.",
     },
     {
-      title: "Ihre Website bringt keine Anfragen",
+      title: "Ihre Website existiert — bringt aber nichts",
       body:
-        "Die Seite sieht vielleicht gut aus, aber es fehlt die Struktur: kein klarer Handlungsaufruf, kein Funnel, keine Führung. Besucher kommen — und gehen wieder.",
+        "Die Seite sieht okay aus, aber es kommt keine einzige Anfrage darüber rein. Kein Anruf, keine Bestellung, kein Kontakt. Besucher kommen, schauen kurz — und sind wieder weg.",
     },
     {
-      title: "Digitale Insellösungen statt System",
+      title: "Manche Tage sind überfüllt, andere komplett tot",
       body:
-        "Website hier, Social Media dort, Bestellungen per Telefon. Ohne ein verbundenes System gehen Anfragen verloren und Prozesse kosten unnötig Zeit.",
+        "Montags kommt keiner, Freitags explodiert alles. Kein System, keine Planbarkeit. Kunden kommen spontan statt über Reservierungen — und Sie können weder planen noch steuern.",
     },
   ],
   solutionClusters: [
     {
-      title: "Präsenz",
-      lead: "Ein Auftritt, der die Marke sauber trägt und sofort verständlich verkauft.",
-      points: ["Websites", "E-Shops", "CMS-Lösungen", "Markenauftritt"],
+      title: "Phase 1: Laden füllen",
+      lead: "Wir bauen Ihre digitale Präsenz auf — Website, Angebote, Google-Sichtbarkeit. Ziel: Mehr Kunden kommen rein, direkt und ohne Umweg über teure Plattformen.",
+      points: ["Website & E-Shop", "Google Seite 1", "Social Media", "Angebotslogik"],
     },
     {
-      title: "Conversion",
-      lead: "Klare Anfrage-, Bestell- und Angebotslogik statt digitaler Reibung.",
-      points: [
-        "Bestellsysteme",
-        "Anfragepfade",
-        "WooCommerce",
-        "Landingpage-Logiken",
-      ],
+      title: "Phase 2: Planbarkeit schaffen",
+      lead: "Statt Chaos und Spontanbesuchen: Reservierungen, Direktbestellungen und echte Kundenbindung über Ihre eigene Website. Sie steuern, wann wie viel los ist.",
+      points: ["Bestellsystem", "Reservierungen", "Kundenkommunikation", "Stammkunden-Aufbau"],
     },
     {
-      title: "Sichtbarkeit",
-      lead: "Reichweite, die über Suche, Content und lokale Nachfragekanäle aufgebaut wird.",
-      points: ["SEO", "Social Media", "organischer Content", "lokale Präsenz"],
-    },
-    {
-      title: "Prozesse",
-      lead: "Digitale Infrastruktur, die intern sauber läuft und außen professioneller wirkt.",
-      points: [
-        "interne IT-Infrastruktur",
-        "Content-Workflows",
-        "CMS-Prozesse",
-        "digitale Systempflege",
-      ],
+      title: "Phase 3: Gewinn optimieren",
+      lead: "Wenn der Laden läuft und planbar ist, drehen wir an den Stellschrauben: Preise anpassen, zeitlich begrenzte Angebote testen, den Sweetspot zwischen Auslastung und Gewinn finden.",
+      points: ["Preisoptimierung", "Zeitlich begrenzte Aktionen", "Datenbasierte Anpassung", "Wachstumsstrategie"],
     },
   ],
   resultMetrics: [
@@ -119,45 +104,45 @@ export const homeContent = {
       label: "Mehr Umsatz",
       value: 24,
       suffix: "%",
-      context: "Kundenbeispiel aus einer Direct-Order-Optimierung",
+      context: "Durch Direktbestellungen statt Plattformumweg",
       isCaseSpecific: true,
     },
     {
-      label: "Mehr vom Umsatz behalten",
+      label: "Plattformkosten gespart",
       value: 44,
       suffix: "%",
-      context: "Kundenbeispiel mit reduzierter Plattformabhängigkeit",
+      context: "Weniger Lieferando, Wolt & Co. — mehr bleibt bei Ihnen",
       isCaseSpecific: true,
     },
     {
-      label: "Mehr gewonnene Kunden",
+      label: "Mehr Neukunden",
       value: 22,
       suffix: "%",
-      context: "Kundenbeispiel mit verbesserter digitaler Präsenz",
+      context: "Über Google-Sichtbarkeit und eigene Kanäle",
       isCaseSpecific: true,
     },
     {
-      label: "Systembausteine",
-      value: 4,
+      label: "Phasen bis zum Ergebnis",
+      value: 3,
       suffix: "",
-      context: "Präsenz, Conversion, Sichtbarkeit und Prozesse greifen zusammen",
+      context: "Laden füllen → Planbarkeit → Gewinn optimieren",
       isCaseSpecific: false,
     },
   ],
   chartSeries: {
     revenueComparison: {
-      label: "Direktumsatz-Verteilung",
-      before: 32,
-      after: 61,
+      label: "Direktbestellungen vs. Plattform",
+      before: 68,
+      after: 68,
       caption:
-        "Illustrative Vergleichsvisualisierung basierend auf dem beschriebenen Restaurant-Mechanismus.",
+        "Anteil der Bestellungen: vorher 68 % über Plattformen — nachher 68 % direkt über die eigene Website.",
     },
     visibilityTrend: {
-      label: "Sichtbarkeitsaufbau",
-      values: [22, 28, 31, 37, 46, 58, 66],
-      labels: ["M1", "M2", "M3", "M4", "M5", "M6", "M7"],
+      label: "Google-Sichtbarkeit",
+      values: [12, 18, 26, 35, 48, 61, 74],
+      labels: ["Monat 1", "Monat 2", "Monat 3", "Monat 4", "Monat 5", "Monat 6", "Monat 7"],
       caption:
-        "Illustrative Verlaufskurve für organische Sichtbarkeit und Nachfragewirkung.",
+        "Typischer Verlauf: Ihre Sichtbarkeit bei Google wächst Monat für Monat.",
     },
     funnel: {
       label: "Vom Klick zur Anfrage",
@@ -175,69 +160,69 @@ export const homeContent = {
     {
       title: "Restaurants & Lieferdienste",
       body:
-        "Statt 30 % an Lieferando abgeben: eigene Bestellseite, Google Maps Platz 1, QR-Code auf jedem Flyer. Kunden bestellen direkt bei Ihnen — mehr Marge, volle Kontrolle.",
+        "Sie zahlen jeden Monat Tausende an Lieferando, Wolt oder Uber Eats — und die Kunden gehören nicht Ihnen. Wir bauen Ihre eigene Bestellseite, bringen Sie auf Google Seite 1 und machen den Direktweg attraktiver als jede Plattform.",
     },
     {
       title: "Handwerker & Dienstleister",
       body:
-        "Wenn jemand \u201eElektriker in der Nähe\u201c oder \u201eMaler [Stadt]\u201c googelt, finden sie SIE — nicht den Kollegen ohne Website. Strukturierte Anfragepfade statt verlorener Anrufe.",
+        "Ihr Telefon klingelt nicht, weil niemand Sie findet. Wenn jemand \u201eElektriker in der Nähe\u201c googelt, erscheint Ihre Konkurrenz. Wir ändern das — mit einer Website, die Anfragen bringt, nicht nur gut aussieht.",
     },
     {
-      title: "Lokale Unternehmen",
+      title: "Lokale Geschäfte & Praxen",
       body:
-        "Google-Maps-Profil, Bewertungen, lokale Suchbegriffe — alles in einem System. Ihr Geschäft wird dort sichtbar, wo Kunden in Ihrer Nähe aktiv suchen.",
+        "Kunden suchen in Ihrer Stadt — aber finden Ihre Konkurrenz. Google Maps, Bewertungen und lokale Suchbegriffe: Wir machen Ihr Geschäft dort sichtbar, wo aktiv nach Ihnen gesucht wird.",
     },
     {
-      title: "E-Commerce & Shops",
+      title: "E-Commerce & Online-Shops",
       body:
-        "Conversion-orientierte Shops mit klarer Produktführung. SEO bringt Besucher, das System macht sie zu Käufern — weniger Werbekosten, mehr organischer Umsatz.",
+        "Sie haben Produkte, aber zu wenig Besucher — oder Besucher, die nicht kaufen. Wir bringen organischen Traffic über SEO und bauen einen Shop, der Besucher in Käufer verwandelt.",
     },
   ],
   caseStudy: {
-    eyebrow: "Case Mechanics",
-    title: "Direktbestellung statt Plattformlogik",
+    eyebrow: "So funktioniert es in der Praxis",
+    title: "Von Lieferando-abhängig zu 68 % Direktbestellungen",
     summary:
-      "Der stärkste Restaurant-Use-Case ist nicht die Website selbst, sondern der Systemwechsel: eigene Bestellstrecke, kontrollierte Angebote, besseres Tracking und weniger Umsatz, der an Plattformen hängen bleibt.",
+      "Ein Restaurant zahlte monatlich Tausende an Plattformgebühren. Wir haben eine eigene Bestellseite gebaut, das Google-Ranking auf Seite 1 gebracht und den Direktkanal attraktiver gemacht als jede Plattform.",
     steps: [
       {
-        title: "1. Plattformabhängigkeit sichtbar machen",
+        title: "1. Problem sichtbar machen",
         body:
-          "Die Ausgangslage wird betriebswirtschaftlich gelesen: Welche Gebühren, welche Abhängigkeit, welche verlorene Marge?",
+          "Wie viel Geld geht jeden Monat an Lieferando & Co.? Wir rechnen gemeinsam durch, was die Plattformabhängigkeit wirklich kostet.",
       },
       {
-        title: "2. Direktkanal attraktiver machen",
+        title: "2. Eigene Bestellseite aufbauen",
         body:
-          "Eigene Bestelllogik, Gutscheine oder Angebotsvorteile machen den Direktweg für Kunden erkennbar sinnvoll.",
+          "Kunden sollen direkt bei Ihnen bestellen — deshalb muss Ihre eigene Seite besser sein: schneller, mit Gutscheinen, Angeboten und klarerem Ablauf.",
       },
       {
-        title: "3. Kontrolle zurückholen",
+        title: "3. Google-Sichtbarkeit aufbauen",
         body:
-          "Website, Bestellsystem, Inhalte und Kommunikation greifen ineinander statt nebeneinander zu laufen.",
+          "Wer \u201ePizza bestellen [Stadt]\u201c googelt, findet jetzt SIE. Google Maps, Bewertungen und SEO sorgen dafür, dass Kunden direkt auf Ihrer Seite landen.",
       },
     ],
     stats: [
       { label: "mehr Umsatz", value: "24 %" },
-      { label: "mehr vom Umsatz behalten", value: "44 %" },
+      { label: "Plattformkosten gespart", value: "44 %" },
       { label: "mehr Kunden gewonnen", value: "22 %" },
-      { label: "Kostenmodell", value: "Einmalpreis statt laufender Plattformkosten" },
+      { label: "Zeitraum", value: "6 Monate" },
     ],
   },
   visibility: {
-    heading: "SEO bedeutet: Kunden finden SIE, nicht Ihre Konkurrenz.",
+    heading: "Wenn jemand \u201ePizza bestellen [Stadt]\u201c googelt — finden sie dann SIE?",
     body:
-      "Was ist SEO? Ganz einfach: Wenn jemand \u201ebester Döner [Stadt]\u201c oder \u201eHandwerker in der Nähe\u201c bei Google eingibt, zeigt Google IHRE Seite auf Platz 1 — nicht die Ihrer Konkurrenz. FinishWerk baut dieses System: technisches SEO-Fundament, lokale Sichtbarkeit, starkes Google-Maps-Profil und Content, der Nachfrage auffängt.",
+      "So funktioniert es: Jemand sucht bei Google nach Ihrem Service in Ihrer Stadt. Wenn Ihr Geschäft nicht auf Seite 1 erscheint, existieren Sie für diese Person nicht. FinishWerk sorgt dafür, dass SIE das erste Ergebnis sind — nicht Ihre Konkurrenz.",
     modules: [
       {
-        title: "SEO-Fundament",
-        body: "Technische Struktur, lokale Suchbegriffe und Seiten, die Google versteht und auf Seite 1 rankt. Aus \u201eunsichtbar\u201c wird \u201egefunden\u201c.",
+        title: "Google Seite 1",
+        body: "Wir optimieren Ihre Website so, dass Google sie versteht und auf Seite 1 rankt. Bei genau den Suchbegriffen, die Ihre Kunden eingeben.",
       },
       {
-        title: "Lokale Präsenz",
-        body: "Google Maps, Bewertungen, Brancheneinträge — wenn Kunden in Ihrer Stadt suchen, erscheinen Sie als erste Anlaufstelle.",
+        title: "Google Maps & Bewertungen",
+        body: "Ihr Geschäft taucht auf der Karte auf, mit Bewertungen und allen Infos. Wenn Kunden in Ihrer Nähe suchen, sind Sie die erste Anlaufstelle.",
       },
       {
-        title: "Nachfrage auffangen",
-        body: "Vom Google-Ergebnis zur Anfrage: Besucher landen auf Ihrer Seite und werden durch klare Handlungsaufforderungen zu Kunden.",
+        title: "Aus Klicks werden Kunden",
+        body: "Jemand findet Sie bei Google, landet auf Ihrer Seite — und wird durch klare Handlungsaufforderungen zum Kunden. Kein Rätselraten, kein Suchen.",
       },
     ],
     reachValues: [14, 19, 23, 34, 41, 56, 73],
@@ -269,10 +254,11 @@ export const homeContent = {
   },
   faqItems,
   cta: {
-    title: "Finden Sie heraus, was passiert, wenn Kunden Sie bei Google finden.",
+    title: "In 15 Minuten zeigen wir Ihnen, wo Sie Geld verlieren — und wie Sie es zurückholen.",
     body:
-      "Im kostenlosen Erstgespräch analysieren wir gemeinsam: Wo stehen Sie bei Google? Wie viel Marge geht an Plattformen? Und welcher digitale Hebel bringt Ihnen am schnellsten mehr Umsatz.",
+      "Im kostenlosen Erstgespräch analysieren wir: Wo stehen Sie bei Google? Wie viel zahlen Sie an Plattformen? Und welcher Hebel bringt Ihnen am schnellsten spürbar mehr Umsatz.",
     primaryCta: "Erstgespräch buchen",
+    primaryCtaMicro: "15 Min · kostenlos · keine Vorbereitung nötig",
     secondaryCta: "Per E-Mail anfragen",
   },
 } as const;

@@ -10,6 +10,7 @@ type CtaContent = {
   title: string;
   body: string;
   primaryCta: string;
+  primaryCtaMicro?: string;
   secondaryCta: string;
 };
 
@@ -29,20 +30,27 @@ export function CtaSection({ content }: { content: CtaContent }) {
               <p className="max-w-2xl text-lg leading-8 text-[var(--muted-strong)]">
                 {content.body}
               </p>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <BookingButton
-                  label={content.primaryCta}
-                  variant="primary"
-                  className="sm:min-w-[15rem]"
-                />
-                <Button
-                  href={`mailto:${siteConfig.contact.email}`}
-                  variant="secondary"
-                  className="sm:min-w-[15rem]"
-                >
-                  <Mail className="mr-2 h-4 w-4" />
-                  {content.secondaryCta}
-                </Button>
+              <div>
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <BookingButton
+                    label={content.primaryCta}
+                    variant="primary"
+                    className="sm:min-w-[15rem]"
+                  />
+                  <Button
+                    href={`mailto:${siteConfig.contact.email}`}
+                    variant="secondary"
+                    className="sm:min-w-[15rem]"
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    {content.secondaryCta}
+                  </Button>
+                </div>
+                {content.primaryCtaMicro && (
+                  <p className="mt-2 text-xs text-[var(--muted)]">
+                    {content.primaryCtaMicro}
+                  </p>
+                )}
               </div>
             </div>
 

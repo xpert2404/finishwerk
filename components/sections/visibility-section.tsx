@@ -19,35 +19,39 @@ type VisibilityContent = {
 
 const icons = [Search, Camera, SignalHigh];
 
-export function VisibilitySection({
-  content,
-}: {
-  content: VisibilityContent;
-}) {
+export function VisibilitySection({ content }: { content: VisibilityContent }) {
   return (
     <SectionShell id="sichtbarkeit">
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <SectionIntro
-          eyebrow="Social / SEO Engine"
+          eyebrow="Google & Sichtbarkeit"
           title={content.heading}
           body={content.body}
         />
         <Reveal>
           <GlowPanel className="h-full">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
-              Reichweitenaufbau
+              Ihre Google-Sichtbarkeit
             </p>
             <h3 className="mt-4 font-display text-3xl font-semibold text-white">
-              Präsenz wächst, wenn Inhalte, Suche und Marke zusammenarbeiten.
+              So wächst Ihre Reichweite — Monat für Monat.
             </h3>
             <p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">
-              Visualisierung einer kombinierten Sichtbarkeitsentwicklung über
-              mehrere Touchpoints hinweg.
+              Typischer Verlauf: Je länger Ihr System steht, desto mehr Menschen
+              finden Sie über Google.
             </p>
             <div className="mt-8">
               <AnimatedLineChart
                 values={content.reachValues}
-                labels={["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7"]}
+                labels={[
+                  "Mo 1",
+                  "Mo 2",
+                  "Mo 3",
+                  "Mo 4",
+                  "Mo 5",
+                  "Mo 6",
+                  "Mo 7",
+                ]}
               />
             </div>
           </GlowPanel>

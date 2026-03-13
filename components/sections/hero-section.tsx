@@ -3,9 +3,10 @@
 import { type ReactNode, useEffect, useState } from "react";
 import {
   ArrowRight,
+  Banknote,
   ChartNoAxesCombined,
-  ShieldCheck,
-  Workflow,
+  Puzzle,
+  Search,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { BookingButton } from "@/components/booking/booking-button";
@@ -118,25 +119,40 @@ function HeroVisual({ cards }: { cards: HeroContent["visualCards"] }) {
           <div className="surface-panel-soft self-start rounded-[1.5rem] p-3.5 sm:rounded-[2rem] sm:p-5">
             <div className="mb-2.5 flex items-center justify-between sm:mb-4">
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)] sm:text-xs">
-                System-Dashboard
+                Direktbestellungen vs. Plattform
               </p>
               <ChartNoAxesCombined className="h-4 w-4 text-[var(--accent)]" />
             </div>
-            <ComparisonChart before={32} after={61} />
+            <ComparisonChart
+              before={68}
+              after={68}
+              beforeLabel="Plattform"
+              afterLabel="Direkt"
+            />
             <div className="mt-3 flex items-center gap-2 rounded-xl bg-white/[0.03] px-3 py-2 sm:mt-4">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              <span className="text-[11px] text-[var(--muted-strong)] sm:text-xs">+29 % Steigerung nach Optimierung</span>
+              <span className="text-[11px] text-[var(--muted-strong)] sm:text-xs">
+                Ziel: Mehrheit der Bestellungen direkt
+              </span>
             </div>
           </div>
 
           <div className="space-y-4 sm:space-y-5">
             <div className="surface-panel-soft rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-5">
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)] sm:mb-4 sm:text-xs">
-                Sichtbarkeitsaufbau
+                Google-Sichtbarkeit
               </p>
               <AnimatedLineChart
-                values={[22, 28, 31, 37, 46, 58, 66]}
-                labels={["M1", "M2", "M3", "M4", "M5", "M6", "M7"]}
+                values={[12, 18, 26, 35, 48, 61, 74]}
+                labels={[
+                  "Mo 1",
+                  "Mo 2",
+                  "Mo 3",
+                  "Mo 4",
+                  "Mo 5",
+                  "Mo 6",
+                  "Mo 7",
+                ]}
               />
             </div>
 
@@ -217,10 +233,13 @@ export function HeroSection({ content }: { content: HeroContent }) {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+            <p className="mt-2 text-xs text-[var(--muted)]">
+              15 Min · kostenlos · keine Vorbereitung nötig
+            </p>
           </Anim>
 
-          {/* ── Trust Chips ── */}
-          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3 sm:gap-3">
+          {/* ── Trust Chips (horizontal scroll on mobile) ── */}
+          <div className="-mx-4 flex gap-2.5 overflow-x-auto px-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-3 sm:overflow-visible sm:px-0">
             {content.trustChips.map((chip, index) => (
               <Anim key={chip} delay={stagger(index, 0.06, 0.38)} y={12}>
                 <MetricChip
@@ -233,23 +252,23 @@ export function HeroSection({ content }: { content: HeroContent }) {
             ))}
           </div>
 
-          {/* ── Feature Cards ── */}
-          <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+          {/* ── Feature Cards (hidden on mobile, shown sm+) ── */}
+          <div className="hidden gap-3 sm:grid sm:grid-cols-3 sm:gap-4">
             {[
               {
-                icon: ShieldCheck,
-                title: "Privacy-first",
-                body: "Der Buchungsdienst wird erst nach ausdrücklicher Einwilligung geladen.",
+                icon: Banknote,
+                title: "Keine Provision",
+                body: "Kunden bestellen direkt bei Ihnen — kein Lieferando, kein Mittelsmann, kein Umsatzverlust.",
               },
               {
-                icon: Workflow,
-                title: "Systemlogik",
-                body: "Präsenz, Conversion, Sichtbarkeit und Prozesse greifen ineinander.",
+                icon: Search,
+                title: "Google Seite 1",
+                body: "Wer Ihren Service googelt, findet SIE — nicht Ihre Konkurrenz. Lokal und relevant.",
               },
               {
-                icon: ChartNoAxesCombined,
-                title: "Messbarkeit",
-                body: "Resultate werden über KPIs, Graphen und klare Hebel sichtbar gemacht.",
+                icon: Puzzle,
+                title: "Alles aus einer Hand",
+                body: "Website, Bestellsystem, SEO und Content — ein System, das zusammenarbeitet statt nebeneinander steht.",
               },
             ].map((item, index) => (
               <Anim

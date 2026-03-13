@@ -45,9 +45,9 @@ export function ResultsSection({
   return (
     <SectionShell id="ergebnisse">
       <SectionIntro
-        eyebrow="Ergebnisse"
-        title="Messbare Wirkung statt vager Leistungsversprechen."
-        body="KPI-Elemente und Diagramme zeigen die Logik hinter dem Ergebnis: bessere Marge, stärkere Sichtbarkeit, geführte Conversion und mehr Kontrolle über den Direktkanal."
+        eyebrow="Echte Ergebnisse"
+        title="Zahlen, die zeigen, was passiert wenn das System steht."
+        body="Keine vagen Versprechen — echte Kundendaten. So sieht es aus, wenn Direktbestellungen steigen, Plattformkosten sinken und Google-Sichtbarkeit aufgebaut wird."
       />
 
       <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -78,7 +78,7 @@ export function ResultsSection({
               {chartSeries.revenueComparison.label}
             </p>
             <h3 className="mt-4 font-display text-3xl font-semibold text-white">
-              Plattformanteil runter, Direktkanal rauf
+              Weniger Plattform, mehr direkt bei Ihnen
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--muted-strong)]">
               {chartSeries.revenueComparison.caption}
@@ -100,7 +100,7 @@ export function ResultsSection({
               {chartSeries.visibilityTrend.label}
             </p>
             <h3 className="mt-4 font-display text-3xl font-semibold text-white">
-              Sichtbarkeit baut sich auf und wirkt kumulativ
+              Jeden Monat mehr Menschen finden Sie bei Google
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--muted-strong)]">
               {chartSeries.visibilityTrend.caption}
@@ -122,7 +122,7 @@ export function ResultsSection({
               {chartSeries.funnel.label}
             </p>
             <h3 className="mt-4 font-display text-3xl font-semibold text-white">
-              Mehr Kontrolle entlang des Conversion-Pfads
+              Von der Google-Suche zur Bestellung
             </h3>
             <p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">
               {chartSeries.funnel.caption}
@@ -136,17 +136,17 @@ export function ResultsSection({
         <Reveal delay={0.08}>
           <GlowPanel className="h-full">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
-              Ergebnislogik
+              Das ändert sich für Sie
             </p>
             <h3 className="mt-4 font-display text-3xl font-semibold text-white">
-              Gute Systeme machen den nächsten Schritt eindeutig.
+              Kein Rätselraten mehr — klare Ergebnisse.
             </h3>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {[
-                "Klare CTA-Pfade statt unverbundener Seiten",
-                "Direktbestellungen statt Provisionsverlust",
-                "SEO und Social als Nachfrage-System",
-                "Weniger Reibung zwischen Marke, Inhalt und Prozess",
+                "Kunden bestellen direkt bei Ihnen statt über Lieferando",
+                "Ihr Geschäft erscheint auf Google Seite 1",
+                "Ihre Website bringt echte Anfragen und Bestellungen",
+                "Ein System statt 5 verschiedene Tools",
               ].map((item) => (
                 <div
                   key={item}

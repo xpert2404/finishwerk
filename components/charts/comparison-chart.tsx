@@ -18,7 +18,9 @@ export function ComparisonChart({
 }: ComparisonChartProps) {
   const reduceMotion = useReducedMotion();
   const [hydrated, setHydrated] = useState(false);
-  useEffect(() => { setHydrated(true); }, []);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   return (
     <div className="grid grid-cols-2 gap-3 sm:gap-5" aria-hidden="true">
@@ -56,12 +58,18 @@ export function ComparisonChart({
                 initial={{ height: "0%" }}
                 whileInView={{ height: `${item.value}%` }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ delay: index * 0.14, duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+                transition={{
+                  delay: index * 0.14,
+                  duration: 1.0,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
               />
             )}
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-[var(--muted-strong)] sm:text-sm">{item.label}</span>
+            <span className="text-xs text-[var(--muted-strong)] sm:text-sm">
+              {item.label}
+            </span>
             <span className="font-display text-base font-semibold text-white sm:text-lg">
               {item.value}&thinsp;%
             </span>

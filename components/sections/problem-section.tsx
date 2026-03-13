@@ -2,7 +2,7 @@ import {
   CircleDollarSign,
   SearchX,
   MousePointerClick,
-  Workflow,
+  CalendarX,
 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionShell } from "@/components/layout/section-shell";
@@ -14,7 +14,7 @@ type ProblemItem = {
   body: string;
 };
 
-const icons = [CircleDollarSign, SearchX, MousePointerClick, Workflow];
+const icons = [CircleDollarSign, SearchX, MousePointerClick, CalendarX];
 
 export function ProblemSection({
   content,
@@ -24,25 +24,35 @@ export function ProblemSection({
   return (
     <SectionShell id="probleme">
       <SectionIntro
-        eyebrow="Geschäftliche Reibung"
-        title="Wenn die digitale Infrastruktur nicht führt, verliert das Geschäft an Marge, Sichtbarkeit und Kontrolle."
-        body="Die meisten Probleme liegen nicht in fehlenden Tools, sondern in fehlender Systemlogik. Sichtbarkeit, Conversion und operative Abläufe greifen nicht ineinander."
+        eyebrow="Kommt Ihnen das bekannt vor?"
+        title="Wenn Sie sich hier wiedererkennen, sind Sie nicht allein — aber Sie können es ändern."
+        body="Die meisten lokalen Unternehmen haben dieselben Probleme. Der Unterschied: Manche lösen sie. Manche nicht."
       />
 
-      <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2">
         {content.map((item, index) => {
-          const Icon = icons[index] ?? Workflow;
+          const Icon = icons[index] ?? CalendarX;
 
           return (
-            <Reveal key={item.title} delay={index * 0.08}>
+            <Reveal
+              key={item.title}
+              delay={index * 0.08}
+              preset={index % 2 === 0 ? "fade-up" : "fade-left"}
+            >
               <GlowPanel className="h-full">
-                <Icon className="h-6 w-6 text-[var(--accent)]" />
-                <h3 className="mt-6 font-display text-2xl font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">
-                  {item.body}
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="inline-flex shrink-0 rounded-2xl border border-red-500/20 bg-red-500/[0.06] p-3">
+                    <Icon className="h-6 w-6 text-red-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-7 text-[var(--muted-strong)] sm:mt-3">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
               </GlowPanel>
             </Reveal>
           );

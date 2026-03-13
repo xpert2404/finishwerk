@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { BackgroundScene } from "@/components/layout/background-scene";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { StickyMobileCta } from "@/components/layout/sticky-mobile-cta";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { ScrollToTop } from "@/components/providers/scroll-to-top";
 import { BookingProvider } from "@/components/booking/booking-provider";
@@ -45,6 +46,7 @@ export default function RootLayout({
             <SiteHeader />
             <main>{children}</main>
             <SiteFooter />
+            <StickyMobileCta />
           </div>
         </BookingProvider>
       </body>

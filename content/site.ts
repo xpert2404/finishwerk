@@ -33,7 +33,7 @@ export const siteConfig = {
     { value: 3, suffix: "+", label: "Jahre FinishWerk" },
     { value: 8, suffix: "+", label: "Jahre Expertise" },
     { value: 100, suffix: "+", label: "Betreute Projekte" },
-    { value: 4, suffix: "", label: "Systembausteine" },
+    { value: 3, suffix: "", label: "Phasen zum Ergebnis" },
   ],
 } as const;
 

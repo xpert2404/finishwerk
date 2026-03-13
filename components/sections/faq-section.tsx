@@ -12,19 +12,15 @@ type FaqItem = {
   answer: string;
 };
 
-export function FaqSection({
-  content,
-}: {
-  content: readonly FaqItem[];
-}) {
+export function FaqSection({ content }: { content: readonly FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <SectionShell id="faq">
       <SectionIntro
-        eyebrow="FAQ"
-        title="Einwände früh klären, bevor Projekte unnötig komplex werden."
-        body="Die wichtigsten Fragen zu Branchenfokus, Ergebnissystem, Projektrahmen und Datenschutz werden direkt beantwortet."
+        eyebrow="Häufige Fragen"
+        title="Alles, was Sie wissen müssen — bevor Sie sich entscheiden."
+        body="Die wichtigsten Fragen zu Kosten, Ablauf, Ergebnissen und was FinishWerk von anderen unterscheidet."
       />
 
       <div className="mt-12 space-y-4">
