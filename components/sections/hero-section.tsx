@@ -94,10 +94,10 @@ function HeroVisual({ cards }: { cards: HeroContent["visualCards"] }) {
   return (
     <div className="relative mx-auto w-full max-w-[38rem]">
       <div className="absolute inset-0 rounded-[1.75rem] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_60%)] blur-3xl sm:rounded-[2.5rem]" />
-      <div className="surface-panel noise relative overflow-hidden rounded-[1.75rem] p-4 sm:rounded-[2.5rem] sm:p-7">
+      <div className="surface-panel noise relative overflow-hidden rounded-[1.5rem] p-3 sm:rounded-[2.5rem] sm:p-7">
         <div className="absolute inset-0 opacity-60">
           <div
-            className="absolute left-1/2 top-1/2 h-[16rem] w-[16rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 sm:h-[22rem] sm:w-[22rem]"
+            className="absolute left-1/2 top-1/2 h-[12rem] w-[12rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 sm:h-[22rem] sm:w-[22rem]"
             style={
               mounted && !reduceMotion
                 ? { animation: "spin-cw 28s linear infinite" }
@@ -105,7 +105,7 @@ function HeroVisual({ cards }: { cards: HeroContent["visualCards"] }) {
             }
           />
           <div
-            className="absolute left-1/2 top-1/2 h-[11rem] w-[11rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8 sm:h-[16rem] sm:w-[16rem]"
+            className="absolute left-1/2 top-1/2 h-[8rem] w-[8rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8 sm:h-[16rem] sm:w-[16rem]"
             style={
               mounted && !reduceMotion
                 ? { animation: "spin-ccw 22s linear infinite" }
@@ -115,14 +115,18 @@ function HeroVisual({ cards }: { cards: HeroContent["visualCards"] }) {
         </div>
 
         <div className="relative z-10 grid gap-4 sm:gap-5 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="surface-panel-soft rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-5">
-            <div className="mb-3 flex items-center justify-between sm:mb-4">
+          <div className="surface-panel-soft self-start rounded-[1.5rem] p-3.5 sm:rounded-[2rem] sm:p-5">
+            <div className="mb-2.5 flex items-center justify-between sm:mb-4">
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)] sm:text-xs">
                 System-Dashboard
               </p>
               <ChartNoAxesCombined className="h-4 w-4 text-[var(--accent)]" />
             </div>
             <ComparisonChart before={32} after={61} />
+            <div className="mt-3 flex items-center gap-2 rounded-xl bg-white/[0.03] px-3 py-2 sm:mt-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="text-[11px] text-[var(--muted-strong)] sm:text-xs">+29 % Steigerung nach Optimierung</span>
+            </div>
           </div>
 
           <div className="space-y-4 sm:space-y-5">

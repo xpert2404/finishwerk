@@ -21,13 +21,13 @@ export function ComparisonChart({
   useEffect(() => { setHydrated(true); }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-5" aria-hidden="true">
+    <div className="grid grid-cols-2 gap-3 sm:gap-5" aria-hidden="true">
       {[
         { label: beforeLabel, value: before, muted: true },
         { label: afterLabel, value: after, muted: false },
       ].map((item, index) => (
         <div key={item.label} className="space-y-3">
-          <div className="flex h-40 items-end rounded-[1.4rem] bg-white/[0.03] p-3">
+          <div className="flex h-28 items-end rounded-[1.4rem] bg-white/[0.03] p-3 sm:h-40">
             {!hydrated ? (
               <div
                 className={`w-full rounded-[1rem] ${
@@ -61,9 +61,9 @@ export function ComparisonChart({
             )}
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-sm text-[var(--muted-strong)]">{item.label}</span>
-            <span className="font-display text-lg font-semibold text-white">
-              {item.value} %
+            <span className="text-xs text-[var(--muted-strong)] sm:text-sm">{item.label}</span>
+            <span className="font-display text-base font-semibold text-white sm:text-lg">
+              {item.value}&thinsp;%
             </span>
           </div>
         </div>
